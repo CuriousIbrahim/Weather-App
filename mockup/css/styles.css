@@ -1,0 +1,82 @@
+/* Global */
+
+body {
+  /* font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.5; */
+  font: 15px/1.5 Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* date and location */
+
+.date-and-location {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.date-and-location h6 {
+  font-size: 20px;
+}
+
+.date {
+  float: left;
+  /* display: inline-block; */
+}
+
+.location {
+  float: right;
+  /* display: inline-block; */
+  /* display: inline-block; */
+}
+
+/* main weather */
+
+.main-weather {
+  margin-top: 0;
+  border: black 2px solid;
+  text-align: center;
+  padding-bottom: 70px;
+  background-color: #e0feff;
+}
+
+/* weather */
+
+.weather h1 {
+  font-size: 100px;
+  padding: 0;
+  margin: 0;
+}
+
+.weather p {
+  padding: 0;
+  margin: 0;
+}
+
+.weather {
+  margin-right: 50px;
+  margin-left: 20px;
+  float: left;
+}
+
+/* summary */
+
+.summary {
+  /* width: 100%; */
+  /* margin-left: 25px; */
+  margin-top: 45px;
+  text-align: justify;
+}
+
+.summary li {
+  list-style-type: none;
+}
