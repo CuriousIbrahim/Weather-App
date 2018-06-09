@@ -1,0 +1,47 @@
+h1 {
+  text-align: center;
+}
+
+#weather-main {
+  margin-top: 50px;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: auto;
+  text-align: center;
+}
+
+#weather {
+  float: left;
+}
+
+#temp {
+  margin: 0;
+  padding: 0;
+  font-size: 120px;
+}
+
+#other-info {
+  margin-top: 5px;
+  float: right;
+}
+
+li {
+  text-align: left;
+}
+
+@media (max-width: 991px) {
+  #weather {
+    float: none;
+    display: block;
+  }
+  #other-info {
+    float: none;
+    display: block;
+  }
+}
+
+575 @media (max-width: 575px) {
+  #weather-main {
+    margin: auto;
+  }
+}
