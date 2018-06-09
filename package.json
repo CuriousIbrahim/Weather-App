@@ -4,6 +4,7 @@
   "description": "A website that displays the weather and hopefully can locate the user's location",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ibrahim Abdul Hammed",
