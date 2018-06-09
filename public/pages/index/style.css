@@ -1,11 +1,11 @@
 body {
-  font-family: Helvetica;
-  background-color: black;
+  background-color: lightblue;
 }
 
 h1 {
-  color: white;
-  font-size: 75px;
+  margin-top: 100px;
+  color: black;
+  font-size: 50px;
   text-align: center;
 }
 
@@ -20,16 +20,17 @@ input, button {
 }
 
 input {
-  font-size: 50px;
-  width: 10em;
-  height: 100px;
+  font-size: 30px;
+  min-width: 3em;
+  min-height: 50px;
   display: block;
 }
 
 button {
-  font-size: 30px;
-  width: 10em;
-  height: 4em;
+  padding: 10px;
+  font-size: 15px;
+  width: 5em;
+  height: 3em;
   margin-top: 25px;
   display: block;
 }
