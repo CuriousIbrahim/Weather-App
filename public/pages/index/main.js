@@ -10,29 +10,27 @@ $('#find-me').on('click', () => {
         long: long
       };
 
-      console.log(data);
-
       window.location.replace('/weather?lat=' + data.lat + '&long=' + data.long);
-
-      // $.post('/locate', data).done((res) => {
-      //   console.log('done');
-      //   window.location.replace(res.url);
-      // })
 
     })
   } else {}
 });
 
+function searchCity(city) {
+  window.location.replace('/weather?city=' + city);
+}
+
+$("#search-bar").on('keyup', function(e) {
+  if (e.keyCode == 13) {
+    let city = $('#search-bar').val();
+    searchCity(city);
+  }
+});
+
 $('#search').on('click', () => {
-
-  console.log('test');
-
-  console.log($('#search-bar'));
 
   let city = $('#search-bar').val();
 
-  console.log(city);
-
-  window.location.replace('/weather?city=' + city);
+  searchCity(city);
 
 });
