@@ -51,9 +51,10 @@ router.get('/', (req, res) => {
     }).catch((err) => {
 
       if (err.response.status === 404) {
-        console.log('the city was not found');
-      }
 
+        res.render('index', {city: req.query.city});
+
+      }
     });
 
   }
