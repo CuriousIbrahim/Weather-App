@@ -10,7 +10,7 @@ var getWeatherInfo = function(data) {
 
   let temp = data.main.temp;
   let temp_unit = 'C';
-  let description = data.weather.description;
+  let description = data.weather[0].description;
   let humidity = data.main.humidity;
   let wind = data.wind.speed;
   let windDirection = data.wind.deg + " degrees";
