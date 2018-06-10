@@ -15,29 +15,7 @@ $('#find-me').on('click', () => {
       $.post('/locate', data).done((res) => {
         console.log('done');
         window.location.replace(res.url);
-        // window.location.href = res;
       })
-
-      // $.ajax('weather', {
-      //   type: 'POST',
-      //   data: JSON.stringify(data),
-      //   dataType: 'json',
-      //    url: '/weather',
-      //   success: (data) => {
-      //     console.log('success')
-      //   },
-      //   error: (err) => {
-      //     console.log('There seems to have been an error');
-      //   },
-      //   comlete: () => {
-      //     console.log('Complete')
-      //   }
-      // }).done(() => {
-      //   console.log('done');
-      // }).fail((err) => {
-      //   console.log(err);
-      //   console.log('fail');
-      // });
 
     })
   } else {}
