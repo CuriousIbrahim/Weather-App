@@ -34,3 +34,7 @@ button {
   margin-top: 25px;
   display: block;
 }
+
+.alert {
+  margin-top: 15px;
+}
