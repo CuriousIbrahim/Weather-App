@@ -30,15 +30,33 @@ var router = express.Router();
 
 router.get('/', (req, res) => {
 
-  weather.getFromCoords(req.query.lat, req.query.long).then((res1) => {
-    var data = getWeatherInfo(res1);
+  if (req.query.lat && req.query.long) {
 
-    console.log(data);
+    weather.getFromCoords(req.query.lat, req.query.long).then((res1) => {
+      let data = getWeatherInfo(res1);
 
-    res.render('weather', data);
-  }).catch((err) => {
-    console.log(err);
-  })
+      console.log(data);
+
+      res.render('weather', data);
+    }).catch((err) => {
+      // console.log(err);
+    })
+
+  } else if (req.query.city) {
+
+    weather.getFromCity(req.query.city).then((res1) => {
+      let data = getWeatherInfo(res1);
+
+      res.render('weather', data);
+    }).catch((err) => {
+
+      if (err.response.status === 404) {
+        console.log('the city was not found');
+      }
+
+    });
+
+  }
 })
 
 module.exports = router;
