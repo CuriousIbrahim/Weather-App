@@ -9,19 +9,42 @@ var weather = new Weather();
 var getWeatherInfo = function(data) {
 
   let temp = data.main.temp;
-  let temp_unit = 'C';
+
+  let highTemp = data.main.temp_max;
+  let lowTemp = data.main.temp_min;
+
   let description = data.weather[0].description;
   let humidity = data.main.humidity;
   let wind = data.wind.speed;
-  let windDirection = data.wind.deg + " degrees";
+  let windDirection = data.wind.deg;
 
   return {
-    temp: math.round(weatherConverter(temp, 'c')),
-    temp_unit: temp_unit,
+
+    temp: {
+      value: math.round(weatherConverter(temp, 'c')),
+      unit: 'C'
+    },
+    highTemp: {
+      value: math.round(weatherConverter(highTemp, 'c')),
+      unit: 'C'
+    },
+    lowTemp: {
+      value: math.round(weatherConverter(lowTemp, 'c')),
+      unit: 'C'
+    },
     description: description,
-    humidity: humidity,
-    wind: wind,
-    windDirection: windDirection
+    humidity: {
+      value: humidity,
+      unit: '%'
+    },
+    wind: {
+      value: wind,
+      unit: 'm/s'
+    },
+    windDirection: {
+      value: windDirection,
+      unit: '°'
+    }
   }
 
 }
@@ -52,11 +75,16 @@ router.get('/', (req, res) => {
 
       if (err.response.status === 404) {
 
-        res.render('index', {city: req.query.city});
+        res.render('index', {
+          anything: true,
+          city: req.query.city
+        });
 
       }
     });
 
+  } else {
+    res.render('index', {anything: false});
   }
 })
 
