@@ -26,7 +26,7 @@ app.use(express.static('./public'));
 var weather = new Weather();
 
 // listen to port
-app.listen('8000');
+app.listen(process.env.PORT || '8000');
 console.log('Listening to port 8000');
 
 // get routes
