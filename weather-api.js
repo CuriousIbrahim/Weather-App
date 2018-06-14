@@ -6,8 +6,8 @@ const MAIN_URL = 'http://api.openweathermap.org/data/2.5/weather';
 
 module.exports = class Weather {
 
+  // returns a Promise
   async getFromCoords(lat, long) {
-    console.log('Going to', 'lat=', lat, 'and', 'long=', long);
     let url = `${MAIN_URL}?lat=${lat}&lon=${long}&APPID=${API_KEY}`;
     return await axios.get(url).then((res) => {
       return res.data;
@@ -22,8 +22,6 @@ module.exports = class Weather {
     return await axios.get(url).then((res) => {
       return res.data;
     })
-
-    // return toReturn;
   }
 
 }
