@@ -58,8 +58,6 @@ router.get('/', (req, res) => {
     weather.getFromCoords(req.query.lat, req.query.long).then((res1) => {
       let data = getWeatherInfo(res1);
 
-      console.log(data);
-
       res.render('weather', data);
     }).catch((err) => {
       // console.log(err);

@@ -27,7 +27,7 @@ var weather = new Weather();
 
 // listen to port
 app.listen('8000');
-console.log('Listening to port 3000');
+console.log('Listening to port 8000');
 
 // get routes
 var routes = require('./routes/index.js');

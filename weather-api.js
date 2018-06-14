@@ -9,7 +9,6 @@ module.exports = class Weather {
   async getFromCoords(lat, long) {
     console.log('Going to', 'lat=', lat, 'and', 'long=', long);
     let url = `${MAIN_URL}?lat=${lat}&lon=${long}&APPID=${API_KEY}`;
-    console.log(url);
     return await axios.get(url).then((res) => {
       return res.data;
     })
