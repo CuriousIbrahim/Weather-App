@@ -1,17 +1,28 @@
-h1 {
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
   text-align: center;
+  border-bottom: 1px black solid;
+  padding: 15px;
+}
+
+.header h1 {
+  font: black;
 }
 
 #weather-main {
-  margin-top: 50px;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin: auto;
   padding: auto;
+  /* margin: 0 50px 0 50px; */
   text-align: center;
 }
 
 #weather {
-  float: left;
+  display: inline-block;
+  margin-right: 30px;
 }
 
 #temp {
@@ -21,27 +32,64 @@ h1 {
 }
 
 #other-info {
-  margin-top: 5px;
-  float: right;
+  vertical-align: top;
+  padding-top: 30px;
+  margin-top: 0;
+  border-left: 1px black solid;
+  padding-left: 20px;
+  display: inline-block;
+  margin-left: 10px;
+  /* float: right; */
+}
+
+#up-down-weather {
+  vertical-align: top;
+  display: inline-block;
+  padding-top: 40px;
+}
+
+.arrow {
+  width: 50px;
+  height: auto;
 }
 
 li {
   text-align: left;
+  padding: 10px;
+  list-style: none;
 }
 
-@media (max-width: 991px) {
-  #weather {
-    float: none;
-    display: block;
+@media(max-width: 645px) {
+  #temp {
+    z-index: 10;
+  }
+  #other-info li {
+    text-align: center;
   }
   #other-info {
-    float: none;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
     display: block;
+    border-left: none;
+    border-top: 1px black solid;
   }
 }
 
-575 @media (max-width: 575px) {
-  #weather-main {
-    margin: auto;
+@media (max-width: 465px) {
+  #temp {
+    font-size: 100px;
+  }
+  #description {
+    /* display: none; */
+    display: inline-block;
+    /* width: 50%; */
+    font-size: 12.7px;
+  }
+  #up-down-weather {
+    padding-top: 10px;
+    width: 20%;
+    text-align: center;
+    height: auto;
   }
 }
