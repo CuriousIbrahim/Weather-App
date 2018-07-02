@@ -18,8 +18,12 @@ var getWeatherInfo = function(data) {
   let wind = data.wind.speed;
   let windDirection = data.wind.deg;
 
-  return {
+  let country = data.sys.country;
+  let name = data.name;
 
+  return {
+    name: name,
+    country: country,
     temp: {
       value: math.round(weatherConverter(temp, 'c')),
       unit: 'C'
@@ -67,6 +71,8 @@ router.get('/', (req, res) => {
 
     weather.getFromCity(req.query.city).then((res1) => {
       let data = getWeatherInfo(res1);
+
+      console.log(data);
 
       res.render('weather', data);
     }).catch((err) => {
