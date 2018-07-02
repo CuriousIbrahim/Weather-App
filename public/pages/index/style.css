@@ -39,3 +39,24 @@ button {
 .alert {
   margin-top: 15px;
 }
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#main {
+  flex: 1 0 auto;
+}
+
+#footer {
+  padding: 15px;
+  background: #a8a8a8;
+  background: 5;
+  text-align: center;
+  flex-shrink: 0;
+}
