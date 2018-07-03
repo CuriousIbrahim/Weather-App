@@ -7,6 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="./assets/css/weather-style.css">
+  <link rel="stylesheet" href="./assets/weather-icons-master/css/weather-icons.min.css">
+  <link rel="stylesheet" href="./assets/weather-icons-master/css/weather-icons-wind.min.css">
   <title>Weather Web App | Weather</title>
 </head>
 
@@ -37,15 +39,15 @@
 
       <div id="other-info">
         <ul class="list-group">
-          <li class=""><span><img src="./assets/img/humidity.png" alt=""></span>
+          <li class=""><span class="wi wi-humidity"></span>
             <%= humidity.value %>
               <%= humidity.unit %>
           </li>
-          <li class="list-group-"><span><img src="./assets/img/wind.png" alt=""></span>
+          <li class="list-group-"><span class="wi wi-strong-wind"></span>
             <%= wind.value %>
               <%= wind.unit %>
           </li>
-          <li class="list-group-"><span><img src="./assets/img/wind_direction.png" alt=""></span>
+          <li class="list-group-"><span class="wi wi-wind-direction"></span>
             <%= windDirection.value %>
               <%= windDirection.unit %>
           </li>
