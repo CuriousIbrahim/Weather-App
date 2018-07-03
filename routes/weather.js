@@ -36,7 +36,7 @@ var getWeatherInfo = function(data) {
       value: math.round(weatherConverter(lowTemp, 'c')),
       unit: 'C'
     },
-    description: description,
+    description: toTitleCase(description),
     humidity: {
       value: humidity,
       unit: '%'
@@ -91,5 +91,14 @@ router.get('/', (req, res) => {
     res.render('index', {anything: false});
   }
 })
+
+// Helper functions
+
+// Copied from https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
+function toTitleCase(str) {
+  return str.replace(/\w\S*/g, function(txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
+}
 
 module.exports = router;
