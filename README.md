@@ -11,3 +11,4 @@ The app uses **NodeJS** and **express** for the backend. As for the frontend, th
 - [x] Display some kind of loading icon when the user clicks 'Locate Me' button
 - [ ] Add functionality to display weather for the next few days
 - [x] Display city when displaying weather. In /weather - Finished at July 1, 2018
+- [ ] Add functionality for the user to convert between units (ex. From Celsius to Fahrenheit)
