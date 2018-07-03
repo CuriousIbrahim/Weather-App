@@ -8,6 +8,6 @@ The app uses **NodeJS** and **express** for the backend. In addition, the app us
 
 ## Todos / Plans
 
-- [ ] Display some kind of loading icon when the user clicks 'Locate Me' button
+- [x] Display some kind of loading icon when the user clicks 'Locate Me' button
 - [ ] Add functionality to display weather for the next few days
 - [x] Display city when displaying weather. In /weather - Finished at July 1, 2018

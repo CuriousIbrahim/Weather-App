@@ -1,5 +1,6 @@
 $('#find-me').on('click', () => {
   if ("geolocation" in navigator) {
+    $('#loading').css('visibility', 'visible');
     navigator.geolocation.getCurrentPosition((position) => {
       console.log(position)
       let lat = position.coords.latitude;
