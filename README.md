@@ -4,6 +4,8 @@ A simple weather app that displays the weather of the user's city of choice. The
 
 The app uses **NodeJS** and **express** for the backend. As for the frontend, the app uses **ejs** as the templating engine. Weather data retrieved from [Open Weather Map API](https://openweathermap.org/api).
 
+A live version can be viewed [here](https://infinite-sierra-98839.herokuapp.com/).
+
 ## Todos / Plans
 
 - [x] Display some kind of loading icon when the user clicks 'Locate Me' button - Done on July 3, 2018
